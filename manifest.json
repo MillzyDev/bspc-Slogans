@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
+  "id": "Slogans",
+  "name": "Slogans",
+  "author": "Millzy",
+  "version": "0.1.0",
+  "description": "Lets you place some customisable text in the environment.",
+  "gameVersion": "1.28.0",
+  "dependsOn": {
+    "BSIPA": "^4.2.2",
+    "SiraUtil": "^3.1.2",
+    "BeatSaberMarkupLanguage": "^1.6.9"
+  }
+}
