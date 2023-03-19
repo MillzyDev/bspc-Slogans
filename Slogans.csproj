@@ -5,6 +5,7 @@
         <RootNamespace>Slogans</RootNamespace>
         <AssemblyName>Slogans</AssemblyName>
         <TargetFramework>net472</TargetFramework>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <DebugSymbols>true</DebugSymbols>
         <LocalRefsDir Condition="Exists('..\Refs')">..\Refs</LocalRefsDir>
         <BeatSaberDir>$(LocalRefsDir)</BeatSaberDir>
@@ -12,13 +13,17 @@
         <AssemblyTitle>Slogans</AssemblyTitle>
         <Product>Slogans</Product>
         <Copyright>Copyright © $ModAuthor$</Copyright>
+        <IsPackable>false</IsPackable>
+        <AssemblyVersion>0.1.0-a1</AssemblyVersion>
+        <FileVersion>0.1.0-a1</FileVersion>
+        <NeutralLanguage>en</NeutralLanguage>
     </PropertyGroup>
     <PropertyGroup Condition="$(DefineConstants.Contains('CIBuild')) OR '$(NCrunch)' == '1'">
-        <DisableCopyToPlugins>True</DisableCopyToPlugins>
+        <DisableCopyToPlugins>False</DisableCopyToPlugins>
     </PropertyGroup>
     <PropertyGroup Condition="'$(NCrunch)' == '1'">
-        <DisableCopyToPlugins>True</DisableCopyToPlugins>
-        <DisableZipRelease>True</DisableZipRelease>
+        <DisableCopyToPlugins>False</DisableCopyToPlugins>
+        <DisableZipRelease>False</DisableZipRelease>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="System.Data.DataSetExtensions" />
@@ -97,14 +102,9 @@
         <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     </ItemGroup>
     <ItemGroup>
-        <None Include="Directory.Build.props" Condition="Exists('Directory.Build.props')" />
-        <None Include="Directory.Build.targets" Condition="Exists('Directory.Build.targets')" />
         <None Include="Slogans.csproj.user" Condition="Exists('Slogans.csproj.user')" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Resources" />
-      <Folder Include="UI\FlowCoordinators" />
-      <Folder Include="UI\ViewControllers" />
-      <Folder Include="UI\Views" />
     </ItemGroup>
 </Project>
