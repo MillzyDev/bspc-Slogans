@@ -20,6 +20,7 @@ namespace Slogans
             zenjector.UseLogger(logger);
             
             zenjector.Install<SAppInstaller>(Location.App, config, this);
+            zenjector.Install<SUIInstaller>(Location.Menu);
         }
     }
 }
